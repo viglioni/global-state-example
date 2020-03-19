@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+      "start": "next start",
+      "heroku-postbuild": "npm run build"
   },
     "author": "Laura Viglioni",
     "github": "https://github.com/Viglioni/global-state-example",
