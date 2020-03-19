@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start"
   },
-    "author": "Laura Viglioni"
-    "github": "https://github.com/Viglioni/global-state-example"
+    "author": "Laura Viglioni",
+    "github": "https://github.com/Viglioni/global-state-example",
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
