@@ -1,0 +1,56 @@
+
+
+
+.home{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .buttons-container{
+	position: relative;
+	display: inherit;
+	flex-direction: row;
+	justify-content: inherit;
+	align-items: inherit;
+	flex-wrap: wrap;
+	
+	width: 90%;
+	padding-top: 5%;
+
+	   	button {
+    width: 15%;
+    min-width: 100px;
+    height: 40px;
+    font-size: 15px;
+    line-heigth: 25px;
+	}
+
+    }
+
+    .dog-container{
+	position: relative;
+	display: inherit;
+	flex-direction: inherit;
+	justify-content: inherit;
+	align-items: inherit;
+	margin: 5%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	max-width: 90%;
+	width: 400px;
+	padding-top: 400px;
+	border: 4px solid white;
+    }
+
+    .another-one{
+	margin-bottom: 5%;
+	width: 150px;
+	height: 58px;
+	font-size: 22px;
+    }
+}
+

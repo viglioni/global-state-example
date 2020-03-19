@@ -1,0 +1,8 @@
+import axios from 'axios'
+
+const apiUrl = "https://dog.ceo/api/"
+
+const getDog = type => {
+    const getUrl = type =>
+          apiUrl + (type === "random" ? "breeds/image/random" )
+}

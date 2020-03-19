@@ -1,0 +1,13 @@
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+
+const BreedButtons = ({}) => {
+    return (<div/>);
+};
+
+BreedButtons.propTypes = {};
+
+export default BreedButtons;
+
