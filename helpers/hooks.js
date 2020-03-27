@@ -1,5 +1,6 @@
 import { pathOr } from 'ramda'
 import { useRouter } from 'next/router'
+import React, {useState, useEffect} from 'react'
 
 /*
  * FUNCTIONS
@@ -15,12 +16,28 @@ import { useRouter } from 'next/router'
  * @param (obj optional) - router prop
  */
 export const useRouteAsState =  (queryName, initialState, r) => {
-  const router = useRouter ? useRouter() : r
-    const activeState = pathOr(initialState, ['query', queryName], router)
+    const router = useRouter ? useRouter() : r
+    const getUpdatedState = () => decodeURIComponent(
+        pathOr(initialState, ['query', queryName], router))
+    
+    const [state, setState] = useState( getUpdatedState() )
+
+     useEffect(()=> {
+        setState( getUpdatedState() )
+     }, [router.query])
+    
   const setActiveState = state =>
     router.push({
       pathname: router.pathname,
-      query: { ...router.query, [queryName]: state }
+        query: { ...router.query, [queryName]: encodeURIComponent(state) }
     })
-  return [activeState, setActiveState]
+  return [state, setActiveState]
+}
+
+export const setSeveralStates = (states, r) => {
+  const router = useRouter ? useRouter() : r
+  router.push({
+    pathname: router.pathname,
+    query: {...states }
+  })
 }
