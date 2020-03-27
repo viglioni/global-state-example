@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Button} from 'antd'
 import {map} from 'ramda'
-import {useRouteAsState} from '../../helpers/hooks'
+import {useRouteAsState} from '../../../helpers/encoded-state'
 
 const BreedButtons = ({}) => {
 
@@ -15,6 +15,7 @@ const BreedButtons = ({}) => {
             <Button
               type={breed === dogBreed ? "primary" : "secondary"}
               onClick={()=> setDogBreed(breed)}
+              key={breed}
             >
               {breed}
             </Button>),

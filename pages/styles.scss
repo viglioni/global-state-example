@@ -1,13 +1,57 @@
 
+// antd design
+.ant-btn {
+    background-color: #e7e9f3 !important;
+    border: none !important;
+    transition: 0.4s !important;
+    border-top: 4px solid #f9f6f6 !important;
+    border-bottom: 4px solid #f9f6f6 !important;
+    &:hover {
+	background-color: #cdb2d7 !important;
+	color: white !important;
+	border: none !important;
+    }
 
+    &:first-child {
+	border-left: 4px solid #f9f6f6 !important;
+    }
+    &:last-child {
+	border-right: 4px solid #f9f6f6 !important;
+    }
+}
+
+.ant-btn-primary{
+    background-color: #ad8fb9 !important;
+    
+}
+
+.ant-typography {
+    color: #454548 !important;
+}
+
+.ant-spin {
+    .ant-spin-dot-item {
+	background-color: #c19fce
+    }
+    .ant-spin-text {
+	color: #c19fce
+    }
+}
+
+// page
 
 .home{
-    background-color: black;
+    background-color:  #ede4e2 ;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
+
+    .title {
+	padding: 20px;
+    }
 
     .buttons-container{
 	position: relative;
@@ -18,15 +62,20 @@
 	flex-wrap: wrap;
 	
 	width: 90%;
-	padding-top: 5%;
+	padding-top: 20px;
 
-	   	button {
-    width: 15%;
-    min-width: 100px;
-    height: 40px;
-    font-size: 15px;
-    line-heigth: 25px;
+
+	
+	button {
+	    width: 15%;
+	    min-width: 108px;
+	    height: 48px;
+	    font-size: 15px;
+	    line-heigth: 25px;
+	    border-radius: 0;
 	}
+
+
 
     }
 
@@ -43,14 +92,15 @@
 	max-width: 90%;
 	width: 400px;
 	padding-top: 400px;
-	border: 4px solid white;
+	border: 4px solid #f9f6f6;
     }
 
     .another-one{
 	margin-bottom: 5%;
-	width: 150px;
-	height: 58px;
+	width: 158px;
+	height: 62px;
 	font-size: 22px;
+	border: 4px solid #f9f6f6 !important;
     }
 }
 

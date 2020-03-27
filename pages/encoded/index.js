@@ -1,12 +1,14 @@
 import React, {useEffect, useCallback, useState} from 'react'
 import Head from 'next/head'
-import getDog from '../helpers/api'
-import {useRouteAsState} from '../helpers/hooks'
-import Loading from '../helpers/loading'
-import "./styles.scss"
+import getDog from '../../helpers/api'
+import {useRouteAsState} from '../../helpers/encoded-state'
+import Loading from '../../helpers/loading'
+import "../styles.scss"
 import "antd/dist/antd.css";
 import BreedButtons from './components/breed-buttons'
-import {Button} from 'antd'
+import {Button, Typography} from 'antd'
+
+const {Title} = Typography
 
 const Home = () => {
     const [loading, setLoading] = useState(false)
@@ -33,6 +35,7 @@ const Home = () => {
 
     return (
         <div className="home">
+          <div className="title"> <Title>Global States in URL encoded with base 64</Title>  </div>
           <BreedButtons/>
         <div className="dog-container" style={{backgroundImage: `url(${dog})`}}>
           <Loading show={loading}/>
